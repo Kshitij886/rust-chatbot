@@ -9,7 +9,7 @@ pub async fn get_answer_from_ai(
     State(provider) : State<Arc<dyn AIChatBotProvider +Send + Sync>>
     payload: MessageReq,
 ) -> impl IntoResponse{
-    match get_answer(payload).await {
+    match provider.get_answer(payload).await {
         Ok(answer) => {
             Ok(json_resp((Some(StatusCode::OK)), Some(answer)))
         },
