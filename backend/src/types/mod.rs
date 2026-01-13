@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+pub mod message_req_types;
 
 #[derive(Serialize, Deserialize)]
 pub struct DSResponse<T> {

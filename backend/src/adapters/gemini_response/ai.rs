@@ -1,6 +1,6 @@
 use serde_json::json;
 
-pub async fn get_suggestions(api_key: &str, prompt: &str) -> Result<String, reqwest::Error> {
+pub async fn get_suggestions(api_key: &str, prompt: String) -> Result<String, reqwest::Error> {
     let url = format!("https://generativelanguage.googleapis.com/v1beta/models/gemma-3-27b-it:generateContent?key={}", api_key);
     let body = json!({
         "contents": [

@@ -4,7 +4,7 @@ pub mod handlers;
 pub mod routes;
 pub mod types;
 pub mod web;
-
+pub mod adapters;
 #[tokio::main]
 async fn main() {
     let listener = TcpListener::bind("127.0.0.1:8080").await.unwrap();
