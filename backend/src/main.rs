@@ -5,6 +5,7 @@ use tokio::{
 pub mod routes;
 pub mod handlers;
 pub mod types;
+pub mod web;
 
 #[tokio::main]
 async fn main() {

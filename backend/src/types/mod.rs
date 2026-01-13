@@ -11,3 +11,14 @@ impl<T> DSResponse<T> {
         Self {data, err}
     }
 }
+
+pub struct DSError<T> {
+    pub data: Option<T>,
+    pub err : Option<T>,
+}
+
+impl<T> DSError<T> {
+    pub fn new (data: Option<T>, err: Option<T>) -> Self {
+        Self {data, err}
+    }
+}

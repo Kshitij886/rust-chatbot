@@ -9,7 +9,7 @@ pub async fn first_route() -> impl IntoResponse {
     (
         StatusCode::OK,
         Json(DSResponse {
-            data: Some("hello World".to_string()),
+            data: Some("hello World"),
             err: None
         })
     )
