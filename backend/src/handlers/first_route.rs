@@ -1,16 +1,8 @@
 use axum::{Json, response::IntoResponse};
 use reqwest::StatusCode;
 
-use crate::types::DSResponse;
-
-
+use crate::{types::DSResponse, web::json_resp};
 
 pub async fn first_route() -> impl IntoResponse {
-    (
-        StatusCode::OK,
-        Json(DSResponse {
-            data: Some("hello World"),
-            err: None
-        })
-    )
+    json_resp(Some(StatusCode::OK), Some("Hello world!"))
 }
