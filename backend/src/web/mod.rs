@@ -13,10 +13,10 @@ pub fn json_resp<T>(code: Option<StatusCode>, data: T) -> (StatusCode, Json<DSRe
         }),
     );
 }
-pub fn json_err<T>(code: Option<StatusCode>, error: T) -> (StatusCode, Json<DSError<T>>) {
+pub fn json_err<T>(code: Option<StatusCode>, error: T) -> (StatusCode, Json<DSResponse<T>>) {
     return (
         code.unwrap_or_default(),
-        Json(DSError {
+        Json(DSResponse {
             data: None,
             err: Some(error),
         }),

@@ -18,3 +18,5 @@ sqlx = { version = "0.8.6", features = [
     "macros",
     "uuid",
 ] }
+tower-http = { version = "0.6.8", features = ["trace", "cors"] }
+http = "1.4.0"
