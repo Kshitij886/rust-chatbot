@@ -1,8 +1,8 @@
 use serde::{Deserialize, Serialize};
 
 use crate::adapters::gemini_response::{AIChatBotProvider, GeminiQueryProvider};
-pub mod message_req_types;
 pub mod ai_response_types;
+pub mod message_req_types;
 #[derive(Serialize, Deserialize)]
 pub struct DSResponse<T> {
     pub data: Option<T>,
