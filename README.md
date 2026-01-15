@@ -15,7 +15,7 @@ single‑page app provides a clean, modern chat interface.
 ## Features
 
 - 🧠 **AI‑powered chat** – messages are processed on the Rust backend and
-  forwarded to an LLM provider (e.g. OpenAI or any compatible API).
+  forwarded to an LLM provider.
 - ⚙️ **Rust backend API** – type‑safe, fast, and easy to extend.
 - 💬 **React chat interface** – modern UI with message bubbles and typing area.
 - 🌐 **REST/JSON protocol** – the frontend talks to the backend via JSON over HTTP.
@@ -28,16 +28,16 @@ single‑page app provides a clean, modern chat interface.
 **Backend**
 
 - Rust
-- (Choose your framework) e.g. `axum`, `actix-web`, or `warp`
+- `axum`
 - `tokio` for async runtime
-- `reqwest` (or similar) for calling the LLM provider
+- `reqwest` for calling the LLM provider
 
 **Frontend**
 
 - React
-- JavaScript or TypeScript
-- Vite / CRA / Next.js (depending on your setup)
-- CSS / Tailwind / styled‑components for styling
+- JavaScript
+- Vite
+- Tailwind for styling
 
 ---
 
@@ -45,9 +45,9 @@ single‑page app provides a clean, modern chat interface.
 
 ```text
 ┌──────────────┐       HTTP (JSON)       ┌──────────────┐
-│   React UI   │  ───────────────────▶   │ Rust Backend │
-│  (frontend)  │                         │   /api/chat  │
+│   React UI   │  ───────────────────▶   │Rust Backend │
+│  (frontend)  │                         │  /get-answer │
 └──────────────┘       AI Provider       └──────────────┘
                                   ▲
                                   │
-                         LLM API (e.g. OpenAI)
+                         LLM API 
